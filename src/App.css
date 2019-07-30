@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap');
+
+/* 
+1.loader
+2. main App settings
+3. checkbox
+4. dice settings
+*/
+
+/* ===========       loader      ======================= */
+
+.loading{
+ width: 100%;
+ height: 100vh;
+ background: black;
+text-align: center;
+padding: 200px 0 0 0;
+}
+
+.animation{
+    font-size: 200px;
+    color: white;
+}
+
+#animation {
+		animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+
+/* =========== main App settings ======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0}
+
+
+body {
+    background: white;
+font-family: 'PT Serif Caption', serif;}
+
+p {
+  font-family: 'PT Serif Caption', serif;
+  display: inline-block;
+}
+
+footer p{
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+font-size: calc(5px + 1vh);
+padding: 5px;
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  flex-wrap: wrap;
+  color: white;
+  
+
+}
+
+.App-header {
+  background-color: #1dbadf;;
+  color: white;
+}
+
+.App-footer {
+  background-color: black;
+  min-height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  clear: both;
+  position: relative;  
+  bottom: 0;
+  width: 100%;
+  margin-top: 10px;
+} 
+
+div.one-record.green {
+  color: rgb(29, 170, 29);
+  cursor: pointer;
+   transition: 0.1s ease-in-out;
+}
+
+.green:active  {
+transform: rotate(360deg);
+border: 0;
+outline: 0;
+}
+.red {
+  color: red;
+   transition: 0.8s ease-in-out;
+}
+
+
+.title__header{
+  font-size: calc(45px + 2vmin);
+ font-family: 'Dancing Script', cursive;
+  padding: 1%;
+  margin: 2px;
+  text-align: center;
+}
+
+label, .form-control {
+  font-family: 'PT Serif Caption', serif;
+}
+
+.QWlogo {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+  background-color: black;
+  background: url(static/media/logo.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  left: 40px;
+}
+
+.warning{
+  color: red;
+  margin-top: 20px;
+}
+
+
+.my_button, .my_button:focus
+{
+margin-left: 50px;
+text-align: center;
+vertical-align: middle;
+border: none;
+width: 80%;
+margin-top: 12px;
+margin-bottom: 12px;
+height: 40px;
+color: #fff !important;
+cursor: pointer;
+-webkit-box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.33);
+-moz-box-shadow: 3px3px 2px 1px rgba(0,0,0,0.33);
+box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.33);
+position: relative;
+}
+
+.roll {
+background-color: #1dbadf !important; 
+}
+
+.roll:active {
+  background-color: #095161 !important;
+  color: rgba(255, 255, 255, 0.226) !important;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);
+box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);} 
+
+
+.reset
+{
+  background-color: #df1d1d !important;
+
+}
+  
+ .reset:active {
+  background-color: #5f080d !important;
+  color: rgb(110, 110, 110) !important;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);
+-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);
+box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.33);} 
+
+/*-<=====================Cols=============================> */
+.col__main{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+a.link {
+  color: white;
+  text-decoration: none
+}
+a:hover.link{
+  color: rgba(29,187,223,1);
+  transition: 0.3s;
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+
+/* ===================== C H E C K B O X ======================= */
+label {
+  font-size: calc(8px + 1vh);
+  padding: 1%;
+  margin: 2px;
+  margin-bottom: 10px;
+  color: rgb(61, 68, 165);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+position: relative;
+left: 8px
+}
+
+.form-control {
+  border-color: #1dbadf;
+  outline: #1dbadf;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type=checkbox]+label{
+height: 145px;
+width: 145px;
+display:inline-block;
+position: relative;
+margin: 3px;
+background-size: cover ;
+transition: 0.5s;
+} 
+
+@media all and (max-width: 361px){
+  input[type=checkbox]+label{
+height:160px;
+width: 160px;
+  }
+
+  .react-numeric-input{
+    position: absolute;
+left: -75%;
+}
+}
+
+input[type=checkbox]:hover+label 
+{
+border-color:#1dbadf;
+border-style: solid;
+border-width: 1px;
+transition: 0.5s;
+cursor: pointer;
+}
+
+input[type=checkbox]:checked+label
+{
+border:  #1dbadf solid; 
+border-radius: 25%;
+border-width: 5px;
+transition: 0.5s;
+}
+
+.react-numeric-input{
+  left: 25px
+}
+
+ 
+/*=======================  dices settings =========================*/
+
+
+/* W I K I N G S  */
+
+.k4.vik{
+  background: url("./static/dice/vik/k4.jpg");
+background-size: cover;
+}
+
+.k6.vik{
+  background: url("./static/dice/vik/k6.jpg");
+background-size: cover}
+
+.k8.vik{
+  background: url("./static/dice/vik/k8.jpg");
+background-size: cover}
+
+.k10.vik{
+background: url("./static/dice/vik/k10.jpg");
+background-size: cover}
+
+.k12.vik{
+background: url("./static/dice/vik/k12.jpg");
+background-size: cover}
+
+.k20.vik{
+background: url("./static/dice/vik/k20.jpg");
+background-size: cover}
+
+.k100.vik{
+  background: url("./static/dice/vik/k100.jpg");
+background-size: cover}
+
+
+/* C L A S S I C */
+
+.k4.classic{
+  background: url("./static/dice/classic/k4.jpg");
+background-size: cover;
+}
+
+.k6.classic{
+  background: url("./static/dice/classic/k6.jpg");
+background-size: cover}
+
+.k8.classic{
+  background: url("./static/dice/classic/k8.jpg");
+background-size: cover}
+
+.k10.classic{
+background: url("./static/dice/classic/k10.jpg");
+background-size: cover}
+
+.k12.classic{
+background: url("./static/dice/classic/k12.jpg");
+background-size: cover}
+
+.k20.classic{
+background: url("./static/dice/classic/k20.jpg");
+background-size: cover}
+
+.k100.classic{
+  background: url("./static/dice/classic/k100.jpg");
+background-size: cover}
+
+
+/* G A L A X Y */
+
+.k4.galaxy{
+  background: url("./static/dice/galaxy/k4.jpg");
+background-size: cover;
+}
+
+.k6.galaxy{
+  background: url("./static/dice/galaxy/k6.jpg");
+background-size: cover}
+
+.k8.galaxy{
+  background: url("./static/dice/galaxy/k8.jpg");
+background-size: cover}
+
+.k10.galaxy{
+background: url("./static/dice/galaxy/k10.jpg");
+background-size: cover}
+
+.k12.galaxy{
+background: url("./static/dice/galaxy/k12.jpg");
+background-size: cover}
+
+.k20.galaxy{
+background: url("./static/dice/galaxy/k20.jpg");
+background-size: cover}
+
+.k100.galaxy{
+  background: url("./static/dice/galaxy/k100.jpg");
+background-size: cover}
+
+
+/* E L F I C K I E  */
+
+.k4.elvish{
+  background: url("./static/dice/elvish/k4.jpg");
+background-size: cover;
+}
+
+.k6.elvish{
+  background: url("./static/dice/elvish/k6.jpg");
+background-size: cover}
+
+.k8.elvish{
+  background: url("./static/dice/elvish/k8.jpg");
+background-size: cover}
+
+.k10.elvish{
+background: url("./static/dice/elvish/k10.jpg");
+background-size: cover}
+
+.k12.elvish{
+background: url("./static/dice/elvish/k12.jpg");
+background-size: cover}
+
+.k20.elvish{
+background: url("./static/dice/elvish/k20.jpg");
+background-size: cover}
+
+.k100.elvish{
+  background: url("./static/dice/elvish/k100.jpg");
+background-size: cover}
+
+
+/*  C Y B E R P U N K */
+
+.k4.elvish{
+  background: url("./static/dice/elvish/k4.jpg");
+background-size: cover;
+}
+
+.k6.elvish{
+  background: url("./static/dice/elvish/k6.jpg");
+background-size: cover}
+
+.k8.elvish{
+  background: url("./static/dice/elvish/k8.jpg");
+background-size: cover}
+
+.k10.elvish{
+background: url("./static/dice/elvish/k10.jpg");
+background-size: cover}
+
+.k12.elvish{
+background: url("./static/dice/elvish/k12.jpg");
+background-size: cover}
+
+.k20.elvish{
+background: url("./static/dice/elvish/k20.jpg");
+background-size: cover}
+
+.k100.elvish{
+  background: url("./static/dice/elvish/k100.jpg");
+background-size: cover}
+
+
+/*  D R A G O N*/
+
+
+.k4.dragon{
+  background: url("./static/dice/dragon/k4.jpg");
+background-size: cover;
+}
+
+.k6.dragon{
+  background: url("./static/dice/dragon/k6.jpg");
+background-size: cover}
+
+.k8.dragon{
+  background: url("./static/dice/dragon/k8.jpg");
+background-size: cover}
+
+.k10.dragon{
+background: url("./static/dice/dragon/k10.jpg");
+background-size: cover}
+
+.k12.dragon{
+background: url("./static/dice/dragon/k12.jpg");
+background-size: cover}
+
+.k20.dragon{
+background: url("./static/dice/dragon/k20.jpg");
+background-size: cover}
+
+.k100.dragon{
+  background: url("./static/dice/dragon/k100.jpg");
+background-size: cover}
+
+
+
+
+
+/* shadows    for    records */
+
+.records {
+  margin-top: 60px;
+  display: flex;
+  justify-content:center;
+  background: #1dbadf;
+  padding: 15px;
+  flex-wrap: wrap;
+
+}
+
+
+.k4{
+  background: url("./static/dice/shadow/k4.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.k6{
+  background: url("./static/dice/shadow/k6.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.k8{
+  background: url("./static/dice/shadow/k8.gif");
+    background-size: contain;
+     background-repeat: no-repeat;
+  background-position-x: center;
+  }
+.k10{
+background: url("./static/dice/shadow/k10.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.k12{
+background: url("./static/dice/shadow/k12.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+background-position-x: center;}
+.k20{
+background: url("./static/dice/shadow/k20.gif");
+  background-size: contain;
+background-repeat: no-repeat;
+background-position-x: center;}
+.k100{
+  background: url("./static/dice/shadow/k10.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.dice h3{
+  position: relative;
+  text-align: center;
+  vertical-align: middle
+
+}
+
+/*  </ D I C E S S E T T I N G > */
+
